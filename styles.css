@@ -20,6 +20,10 @@ a {
     text-decoration: none;
 }
 
+b {
+    display: block;
+}
+
 button {
     cursor: pointer; 
 }
@@ -200,6 +204,10 @@ nav {
     margin-bottom: 60px;
 }
 
+#project {
+    max-width: 900px;
+    margin: 0 auto;
+}
 .project__img {
     width: 100%;
 }
@@ -209,6 +217,13 @@ nav {
     border-radius: 20px;
     box-shadow: 0 20px 80px 0 rgb(0, 0, 0, 0.45);
     overflow: hidden;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.project__list {
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .project__description {

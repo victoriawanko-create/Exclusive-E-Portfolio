@@ -4,22 +4,23 @@
 
 function contact(event) {
     event.preventDefault();
+    const loading = document.querySelector('.modal__overlay--loading');
+    const success = document.querySelector('.modal__overlay--success');
+    loading.classList += " modal__overlay--visible";
 
-    // emailjs
-    // .sendForm(
-    //    'service_o2rb4xb',
-    //    'template_mdiov1z',
-    //    event.target,
-    //    'user_lpAmGWo6wLF2IDyPN'
-    // )
-    // .then(() => {
-    //     console.log('this worked')
-    // })
-    const loading = document.querySelector('modal))overlay--loading');
-    const success = document.querySelector('modal__overlay--success');
-    loading.classList += " modal__overlay--visible"
-    setTimeout(() =>{
-        console.log('it worked')
-    }, 500);
-
+    emailjs
+    .sendForm(
+       'service_o2rb4xb',
+       'template_mdiov1z',
+       event.target,
+       'user_lpAmGWo6wLF2IDyPN'
+    ).then(() => {
+        loading.classList.remove("modal__overlay--visible");
+        success.classList += " modal__overlay--visible";
+    }).catch(() => {
+        loading.classList.remove("modal__overlay--visible");
+        alert(
+            "The email service is temporarily unavailable. Please contact me directly at victoriawanko@gmail.com"
+        );
+    })
 }

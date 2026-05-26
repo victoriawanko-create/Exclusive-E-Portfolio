@@ -15,6 +15,7 @@
 </script>
 <script src="index.js"></script>
     </head>
+
 <body>
     <section id="landing-page">
         <nav>
@@ -71,13 +72,12 @@
                 <a href="./assets/job-resume.pdf" target="_blank" class="social__link click">
                     <i class="fa-solid fa-file-pdf"></i>
                 </a>
-                <a href="mailto:victoriawanko@gmail.com" class="social__link click">
                     <i class="fa-solid fa-envelope"></i>
                 </a>
             </div>
          </div>
         </header>
-        <button class="mail__btn click">
+        <button class="mail__btn click" onclick="toggleModal()">
             <i class="fa-solid fa-envelope"></i>
         </button>
         <a href="#projects" class="scroll">
@@ -143,7 +143,7 @@
                     Thanks for the message! Looking forward to speaking to you soon.
                 </div>
             </div>
-            <i class="fas fa-times modal__exit click"></i>
+            <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
          </div> 
          </section> 
 

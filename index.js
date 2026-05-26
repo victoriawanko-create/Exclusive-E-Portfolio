@@ -2,7 +2,6 @@
 // service_o2rb4xb
 // lpAmGWo6wLF2IDyPN
 
-
 function contact(event) {
     event.preventDefault();
     const loading = document.querySelector('.modal__overlay--loading');
@@ -14,7 +13,6 @@ function contact(event) {
        'service_o2rb4xb',
        'template_mdiov1z',
        event.target,
-       'user_lpAmGWo6wLF2IDyPN'
     ).then(() => {
         loading.classList.remove("modal__overlay--visible");
         success.classList += " modal__overlay--visible";
@@ -24,4 +22,14 @@ function contact(event) {
             "The email service is temporarily unavailable. Please contact me directly at victoriawanko@gmail.com"
         );
     })
+}
+
+let isModalOpen = false;
+function toggleModal() {
+  if (isModalOpen) {
+    isModalOpen = false;
+    return document.body.classList.remove("modal--open");
+  }
+  isModalOpen = true;
+
 }

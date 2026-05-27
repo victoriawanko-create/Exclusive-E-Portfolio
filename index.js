@@ -1,6 +1,16 @@
 let isModalOpen = false;
 let contrastToggle = false;
 
+function toggleModal() {
+  if (isModalOpen) {
+    isModalOpen = false;
+    return document.body.classList.remove("modal--open");
+  }
+
+  isModalOpen = true;
+  document.body.classList += " modal--open";
+}
+
 function toggleContrast() {
     contrastToggle = !contrastToggle;
     if (contrastToggle) {
@@ -10,7 +20,6 @@ function toggleContrast() {
         document.body.classList.remove("dark-theme")
     }
 }
-
 
 function contact(event) {
     event.preventDefault();
@@ -32,16 +41,4 @@ function contact(event) {
             "The email service is temporarily unavailable. Please contact me directly at victoriawanko@gmail.com"
         );
     })
-}
-
-
-
-function toggleModal() {
-  if (isModalOpen) {
-    isModalOpen = false;
-    return document.body.classList.remove("modal--open");
-  }
-
-  isModalOpen = true;
-  document.body.classList += " modal--open";
 }

@@ -1,15 +1,8 @@
 let isModalOpen = false;
-let contrastToggle = false;
 
 function toggleModal() {
-    document.body.classList.toggle("modal--open");
-  if (isModalOpen) {
-    isModalOpen = false;
-    return document.body.classList.remove("modal--open");
-  }
-
-  isModalOpen = true;
-  document.body.classList += " modal--open";
+  isModalOpen = !isModalOpen;
+  document.body.classList.toggle("modal--open");
 }
 
 function contact(event) {
@@ -28,19 +21,10 @@ function contact(event) {
         success.classList += " modal__overlay--visible";
     }).catch(() => {
         loading.classList.remove("modal__overlay--visible");
-        alert(
-            "The email service is temporarily unavailable. Please contact me directly at victoriawanko@gmail.com"
-        );
+        alert("The email service is temporarily unavailable. Please contact me directly at victoriawanko@gmail.com");
     })
 }
 
 function toggleContrast() {
-    document.body.classList.toggle("dark-theme");
-    contrastToggle = !contrastToggle;
-    if (contrastToggle) {
-       document.body.classList += " dark-theme" 
-    }
-    else {
-        document.body.classList.remove("dark-theme")
-    }
+  document.body.classList.toggle("dark-theme");
 }

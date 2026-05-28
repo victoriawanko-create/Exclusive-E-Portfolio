@@ -14,8 +14,8 @@
     </script>
 </head>
 
-<body>
-    <section id="landing-page" onmousemove="moveBackground(event)">
+<body onmousemove="moveBackground(event)">
+    <section id="landing-page">
         <nav>
             <figure>
                 <img id="personal-logo" src="./assets/logo.png" alt="">
@@ -26,7 +26,7 @@
                     nav__link--anchor
                     link__hover-effect
                     link__hover-effect--black
-                    "onclick="toggleModal()">About</a>
+                    "onclick="toggleModal(); return false;">About</a>
                 </li>
                 <li class="nav__link">
                     <a href="#projects" class="
@@ -36,11 +36,11 @@
                     ">Projects</a>
                 </li>
                 <li class="nav__link">
-                    <p href="" class="
+                    <a href="" class="
                     nav__link--anchor
                     link__hover-effect
                     link__hover-effect--black
-                    "onclick="toggleModal()">Contact</p>
+                    "onclick="toggleModal(); return false;">Contact</a>
                 </li>
                 <li class="nav__link click">
                     <p href="" class="
@@ -252,6 +252,6 @@
         </div>
     </div>
     </footer>
-    <script src="index.js"></script>
+    <script src="./index.js" defer></script>
 </body>
 </html>

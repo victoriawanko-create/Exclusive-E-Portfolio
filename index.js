@@ -1,11 +1,13 @@
 let isModalOpen = false;
 
 function moveBackground(event) {
-    const shapes = document.querySelectorAll(".shape")
-    const x = event.clientX;
-    const y = event.clientY;
-    console.log(x, y)
+    console.log(event);
 }
+//     const shapes = document.querySelectorAll(".shape")
+//     const x = event.clientX;
+//     const y = event.clientY;
+//     console.log(x, y)
+// }
 
 function toggleModal() {
   isModalOpen = !isModalOpen;

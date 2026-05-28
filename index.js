@@ -1,13 +1,14 @@
 let isModalOpen = false;
 
+
+
 function moveBackground(event) {
-    console.log(event);
+    const shapes = document.querySelectorAll(".shape")
+    const x = event.clientX;
+    const y = event.clientY;
+    console.log(x, y, Date.now());
+
 }
-//     const shapes = document.querySelectorAll(".shape")
-//     const x = event.clientX;
-//     const y = event.clientY;
-//     console.log(x, y)
-// }
 
 function toggleModal() {
   isModalOpen = !isModalOpen;
@@ -37,3 +38,5 @@ function contact(event) {
 function toggleContrast() {
   document.body.classList.toggle("dark-theme");
 }
+
+document.addEventListener("mousemove", moveBackground);

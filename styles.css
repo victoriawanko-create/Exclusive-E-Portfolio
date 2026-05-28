@@ -223,10 +223,12 @@ input:focus, textarea:focus {
     color: white;
     display: flex;
     align-items: center;
-    position: absolute;
+    position: fixed;
     justify-content: center;
     bottom: 32px;
     right: 48px;
+    z-index: 100;
+    box-shadow: 0 12px 30px 0 rgb(0, 0, 0, 0.28);
 }
 
 .scroll {

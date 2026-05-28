@@ -1,18 +1,21 @@
 let isModalOpen = false;
-
-
+const scaleFactor = 1 / 20;
 
 function moveBackground(event) {
-    const shapes = document.querySelectorAll(".shape")
-    const x = event.clientX;
-    const y = event.clientY;
-    console.log(x, y, Date.now());
-
+    const shapes = document.querySelectorAll(".shape");
+    const x = event.clientX * scaleFactor;
+    const y = event.clientY * scaleFactor;
+    console.log(x, y);
+    for (let i = 0; i < shapes.length; ++i) {
+        const isOdd = i % 2 !== 0;
+        const boolInt = isOdd ? -1 : 1;
+        shapes[i].style.transform = `translate(${x * boolInt}px, ${y * boolInt}px)`
+    }
 }
 
 function toggleModal() {
-  isModalOpen = !isModalOpen;
-  document.body.classList.toggle("modal--open");
+    isModalOpen = !isModalOpen;
+    document.body.classList.toggle("modal--open");
 }
 
 function contact(event) {
@@ -36,7 +39,7 @@ function contact(event) {
 }
 
 function toggleContrast() {
-  document.body.classList.toggle("dark-theme");
+    document.body.classList.toggle("dark-theme");
 }
 
 document.addEventListener("mousemove", moveBackground);
